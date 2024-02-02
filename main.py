@@ -134,11 +134,6 @@ class AddressBook(UserDict):
     def add_record(self, record):
         self.data[record.name.value] = record
 
-    def find_by_name(self, name):
-        for key, record in self.data.items():
-            if key == name:
-                return record
-            
     def find(self, str):
         records = []
         for key, record in self.data.items():
@@ -209,7 +204,7 @@ if __name__ == '__main__':
             print(i)
 
         print('-----------------------------')
-        print(book.find("ka"))
+        print(book.find("kate"))
         print('-----------------------------')
         print(book.find("22"))
         print('-----------------------------')
